@@ -15,7 +15,6 @@ def generate_candy_distributions():
 
     return solutions
 
-# Hiển thị tất cả các cách sắp xếp
 distributions = generate_candy_distributions()
 for i, distribution in enumerate(distributions, start=1):
     print(f"Cách {i}: {distribution}")

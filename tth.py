@@ -2,7 +2,7 @@ from itertools import combinations_with_replacement
 
 
 def generate_candy_distributions():
-    # Số viên kẹo cần thêm để mỗi hộp có ít nhất 3 viên kẹo
+    # Số viên kẹo cần thêm để mỗi hộp có ít nhất 3 viên kẹ
     remaining_candies = 4
     # Tìm tất cả các tổ hợp (y_1, y_2, y_3, y_4) sao cho y_1 + y_2 + y_3 + y_4 = 4
     solutions = []

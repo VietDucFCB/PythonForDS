@@ -69,8 +69,6 @@ class School:
         top_student = max(self.students, key=lambda s: s.calculate_average())
         return top_student.describe()
 
-
-# Tạo đối tượng School
 school = School()
 
 # Thêm học sinh vào trường

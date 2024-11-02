@@ -71,6 +71,7 @@ class School:
 
 school = School()
 
+# Thêm học sinh vào trường
 for i in range(5):
     student = Student(name=f"Student {i+1}", age=np.random.randint(15, 19))
     for _ in range(5):  # Thêm 5 điểm cho mỗi học sinh

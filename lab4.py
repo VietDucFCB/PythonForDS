@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 
 class Student:
     def __init__(self, name, age):
@@ -21,7 +22,7 @@ class Student:
     @age.setter
     def age(self, age):
         if age < 0:
-            raise ValueError("Age must be greater than or equal to 0")
+            raise ValueError("Tuổi không hợp lệ!")
         self._age = age
 
     def add_grade(self, grade):
@@ -29,7 +30,7 @@ class Student:
         if 0 <= grade <= 100:
             self.grades.append(grade)
         else:
-            raise ValueError("Grade must be between 0 and 100")
+            raise ValueError("Điểm không hợp lệ!")
 
     def calculate_average(self):
         """Tính điểm trung bình của học sinh"""
@@ -69,6 +70,18 @@ class School:
         top_student = max(self.students, key=lambda s: s.calculate_average())
         return top_student.describe()
 
+
+def get_students_dataframe(students):
+    """Trả về danh sách học sinh dưới dạng DataFrame"""
+    data = {
+        'Name': [s.name for s in students],
+        'Age': [s.age for s in students],
+        'Average Grade': [s.calculate_average() for s in students]
+    }
+    return pd.DataFrame(data)
+
+
+# Khởi tạo trường
 school = School()
 
 # Thêm học sinh vào trường
@@ -78,8 +91,18 @@ for i in range(5):
         student.add_grade(np.random.uniform(0, 100))
     school.add_student(student)
 
-# Tìm và hiển thị học sinh theo tên
+print("Danh sách học sinh ban đầu:")
+students_df = get_students_dataframe(school.students)
+print(students_df)
+
+print("\nTìm Student 3:")
 print(school.find_student("Student 3"))
 
-# Hiển thị học sinh có điểm trung bình cao nhất
+print("\nHọc sinh có điểm trung bình cao nhất:")
 print(school.get_top_student())
+
+school.remove_student("Student 2")
+
+print("\nDanh sách học sinh sau khi xóa Student 2:")
+students_df_after_removal = get_students_dataframe(school.students)
+print(students_df_after_removal)

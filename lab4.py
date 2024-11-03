@@ -100,6 +100,7 @@ print(school.find_student("Student 3"))
 
 print("\nHọc sinh có điểm trung bình cao nhất:")
 print(school.get_top_student())
+
 school.remove_student("Student 2")
 
 print("\nDanh sách học sinh sau khi xóa Student 2:")

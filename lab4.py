@@ -24,7 +24,6 @@ class Student:
         if age < 0:
             raise ValueError("Tuổi không hợp lệ!")
         self._age = age
-
     def add_grade(self, grade):
         """Thêm điểm vào danh sách điểm"""
         if 0 <= grade <= 100:

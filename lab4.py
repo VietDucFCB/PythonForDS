@@ -31,6 +31,7 @@ class Student:
         else:
             raise ValueError("Điểm không hợp lệ!")
     def calculate_average(self):
+
         """Tính điểm trung bình của học sinh"""
         if not self.grades:
             return 0

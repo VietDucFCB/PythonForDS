@@ -80,14 +80,7 @@ def get_students_dataframe(students):
 
 
 # Khởi tạo trường
-school = School()
 
-# Thêm học sinh vào trường
-for i in range(5):
-    student = Student(name=f"Student {i+1}", age=np.random.randint(15, 19))
-    for _ in range(5):  # Thêm 5 điểm cho mỗi học sinh
-        student.add_grade(np.random.uniform(0, 100))
-    school.add_student(student)
 
 print("Danh sách học sinh ban đầu:")
 students_df = get_students_dataframe(school.students)

@@ -61,14 +61,12 @@ class School:
                 return student.describe()
         return "Student not found"
 
-
     def get_top_student(self):
         """Trả về học sinh có điểm trung bình cao nhất"""
         if not self.students:
             return "No students in the school"
         top_student = max(self.students, key=lambda s: s.calculate_average())
         return top_student.describe()
-
 
 def get_students_dataframe(students):
     """Trả về danh sách học sinh dưới dạng DataFrame"""

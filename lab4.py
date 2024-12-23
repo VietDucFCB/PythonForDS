@@ -61,6 +61,7 @@ class School:
                 return student.describe()
         return "Student not found"
 
+
     def get_top_student(self):
         """Trả về học sinh có điểm trung bình cao nhất"""
         if not self.students:

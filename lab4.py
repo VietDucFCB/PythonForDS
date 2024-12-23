@@ -67,7 +67,6 @@ class School:
             return "No students in the school"
         top_student = max(self.students, key=lambda s: s.calculate_average())
         return top_student.describe()
-
 def get_students_dataframe(students):
     """Trả về danh sách học sinh dưới dạng DataFrame"""
     data = {
@@ -76,7 +75,6 @@ def get_students_dataframe(students):
         'Average Grade': [s.calculate_average() for s in students]
     }
     return pd.DataFrame(data)
-
 
 # Khởi tạo trường
 school = School()

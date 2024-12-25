@@ -167,6 +167,5 @@ def inference(model, test_loader):
     # In báo cáo phân loại
     print("\nClassification Report:\n", classification_report(all_labels, all_preds, target_names=iris.target_names))
 
-
 # Đánh giá mô hình trên tập test
 inference(model, test_loader)

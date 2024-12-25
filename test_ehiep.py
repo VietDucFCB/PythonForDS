@@ -149,8 +149,6 @@ def train(model, train_loader, val_loader, criterion, optimizer, num_epochs=10):
 
 # Huấn luyện mô hình
 train(model, train_loader, val_loader, criterion, optimizer, num_epochs=10)
-
-
 # Hàm suy luận và đánh giá trên tập test
 def inference(model, test_loader):
     model.eval()

@@ -53,6 +53,7 @@ class School:
     def remove_student(self, name):
         """Xóa học sinh khỏi danh sách theo tên"""
         self.students = [s for s in self.students if s.name != name]
+
     def find_student(self, name):
         """Tìm kiếm học sinh theo tên"""
         for student in self.students:

@@ -41,7 +41,6 @@ class Student:
         avg_grade = self.calculate_average()
         return f"Name: {self.name}, Age: {self.age}, Average Grade: {avg_grade:.2f}"
 
-
 class School:
     def __init__(self):
         self.students = []

@@ -14,7 +14,6 @@ def generate_candy_distributions():
             solutions.append(distribution)
 
     return solutions
-
 distributions = generate_candy_distributions()
 for i, distribution in enumerate(distributions, start=1):
     print(f"Cách {i}: {distribution}")
